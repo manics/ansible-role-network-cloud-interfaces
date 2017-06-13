@@ -37,6 +37,6 @@
 - name: network cloud | start new nics
   become: yes
   command: /usr/sbin/ifup {{ item.item }}
-  when: "{{ item | changed }}"
+  when: "item | changed"
   with_items:
   - "{{ network_cloud_modified.results }}"
