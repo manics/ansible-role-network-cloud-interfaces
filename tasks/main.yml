@@ -32,7 +32,7 @@
   copy:
     dest: /etc/dhcp/dhclient-enter-hooks
     src: dhcp-dhclient-enter-hooks
-    mode: 0755
+    mode: "0755"
 
 - name: network cloud | start new nics
   become: yes
